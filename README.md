@@ -18,17 +18,24 @@ File `index.php` in your doc directory should look like this one:
 ```
 <?php
 
-	require_once(dirname(__FILE__) . "/downgen-master/Downgen.php");
+	require_once(dirname(__FILE__) . "/_downgen/Downgen.php");
 
 	$generator = new Downgen(dirname(__FILE__));
-	$generator->cssUrl = "/downgen-master/downgen.css";
+	$generator->cssUrl = "/_downgen/downgen.css";
 	$generator->indexName = "README";
+	$generator->title = "DownGEN Generator";
+	$generator->description = "Markdown documentation";
 	$generator->render();
 
 ?>
 ```
 
 Yep, thats all.
+
+This configuration will look for you markdown pages in same directory as index.php is. In this example Downgen source files are located in `_downgen` subdirectory. See [Hidden pages](#hidden-pages) section for explanation why the directory name begins with underscore.
+
+## User interface screenshot
+[![alt downgen](screenshot_thumb.jpg "Downgen screenshot")](screenshot.jpg)
 
 ## Navigation page names
 Page and directory title is filename without .md extension and underscores with dashed are replaced by spaces.
@@ -42,6 +49,7 @@ For example:
 - `My-page.md` = `My page`
 - `01__First-page` = `First page`
 
+<a name="hidden-pages"/>
 ## Hidden pages and directories
 Pages or directories prefixed with `.` or `_`  are hidden from navigation tree.
 
