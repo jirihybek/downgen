@@ -125,7 +125,7 @@ class DownGen {
 
 			} else {
 
-				echo '[' . preg_replace("/([0-9]+__|[-_])/", " ", $item) . '](./' . $name . '.md)' . "  \n";
+				echo '[' . preg_replace("/([0-9]+__|[-_])/", " ", $item) . '](./' . urlencode($name) . '.md)' . "  \n";
 
 			}
 
@@ -180,7 +180,7 @@ class DownGen {
 
 	//Is relative with upper dir? Redirect to right url
 	if(preg_match("/(\.\/|\.\.\/|\\\)/", $pageName))
-		header("Location: ?page=" . str_replace("\\", "/", substr($pageFilename, strlen($this->pageDir) + 1, strlen($pageFilename) - strlen($this->pageDir) - 4)));
+		header("Location: ?page=" . urlencode(str_replace("\\", "/", substr($pageFilename, strlen($this->pageDir) + 1, strlen($pageFilename) - strlen($this->pageDir) - 4))));
 
 	if(file_exists($pageFilename)):
 
