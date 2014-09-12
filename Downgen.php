@@ -105,6 +105,39 @@ class DownGen {
 <?php
 	}
 
+	/*
+	 * Renders navigation tree as markdown
+	 *
+	 * @param Array $pages
+	 * @param Integer $level
+	 * @void
+	 */
+	protected function renderNavDown($pages = array(), $level = 1){
+
+		foreach($pages as $name => $item){
+
+			if(is_array($item)){
+
+				for($l = 0; $l < $level; $l++) echo "#";
+				echo preg_replace("/([0-9]+__|[-_])/", " ", $name) . "\n";
+
+				echo $this->renderNavDown($item, $level + 1) . "\n";
+
+			} else {
+
+				echo '[' . preg_replace("/([0-9]+__|[-_])/", " ", $item) . '](./' . urlencode($name) . '.md)' . "\n";
+
+			}
+
+		}
+
+	}
+
+	/*
+	 * Render page
+	 *
+	 * @void
+	 */
 	public function render(){
 
 		//Get page
@@ -115,6 +148,13 @@ class DownGen {
 	<head>
 		<title><?php echo $this->title; ?></title>
 		<link rel="stylesheet" href="<?php echo $this->cssUrl; ?>" />
+		<script type="text/javascript">
+
+			function toggleNavDown(){
+				document.getElementById('nav-down').classList.toggle('opened');
+			}
+
+		</script>
 	</head>
 	<body>
 
@@ -124,6 +164,10 @@ class DownGen {
 			<nav>
 <?php $this->renderNavFolder($this->pageList, $pageName); ?>
 			</nav>
+			<textarea id="nav-down" wrap="off"><?php $this->renderNavDown($this->pageList); ?></textarea>
+			<div id="toolbar">
+				<a class="icon icon-nav" href="javascript:toggleNavDown()" title="Show navigation as markdown source">Show navigation as markdown</a>
+			</div>
 		</div>
 
 		<div id="content" class="markdown-body">
