@@ -20,8 +20,8 @@ File `index.php` in your doc directory should look like this one:
 
 	require_once(dirname(__FILE__) . "/_downgen/Downgen.php");
 
-	$generator = new Downgen(dirname(__FILE__));
-	$generator->cssUrl = "/_downgen/downgen.css";
+	$generator = new Downgen(dirname(__FILE__));		//Pages directory path should be absolute
+	$generator->cssUrl = "_downgen/downgen.css";
 	$generator->indexName = "README";
 	$generator->title = "DownGEN Generator";
 	$generator->description = "Markdown documentation";

@@ -106,7 +106,7 @@ class DownGen {
 	public function render(){
 
 		//Get page
-		$pageName = ( isset($_GET['page']) ? str_replace("..", "", $_GET['page']) : $this->indexName );
+		$pageName = ( isset($_GET['page']) ?$_GET['page'] : $this->indexName );
 
 ?>
 <!doctype html>
@@ -127,11 +127,20 @@ class DownGen {
 		<div id="content" class="markdown-body">
 <?php
 
-	if(file_exists("{$this->pageDir}/{$pageName}.md")):
+	$pageFilename = realpath("{$this->pageDir}/{$pageName}.md");
+
+	//Relative path protection
+	if(substr($pageFilename, 0, strlen($this->pageDir)) != $this->pageDir) $pageFilename = null;
+
+	//Is relative with upper dir? Redirect to right url
+	if(strpos($pageName, "../") !== false)
+		header("Location: ?page=" . substr($pageFilename, strlen($this->pageDir) + 1, strlen($pageFilename) - strlen($this->pageDir) - 4));
+
+	if(file_exists($pageFilename)):
 
 		$pageContents = file_get_contents("{$this->pageDir}/{$pageName}.md");
 
-		$pageContents = preg_replace("/\[(.*)\]\(\.\/(.*)\.(md|MD)\)/", '[${1}](?page=${2})' , $pageContents);
+		$pageContents = preg_replace("/\[(.*)\]\(\.\/(.*)\.(md|MD)\)/", '[${1}](?page=' . dirname($pageName) . '/${2})' , $pageContents);
 
 		$parser = new ParsedownExtra();
 		echo $parser->text($pageContents);
