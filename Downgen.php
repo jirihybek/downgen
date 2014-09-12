@@ -125,7 +125,7 @@ class DownGen {
 
 			} else {
 
-				echo '[' . preg_replace("/([0-9]+__|[-_])/", " ", $item) . '](./' . urlencode($name) . '.md)' . "  \n";
+				echo '[' . preg_replace("/([0-9]+__|[-_])/", " ", $item) . '](./' . $name . '.md)' . "  \n";
 
 			}
 
