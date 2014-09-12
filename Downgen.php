@@ -108,7 +108,7 @@ class DownGen {
 	public function render(){
 
 		//Get page
-		$pageName = ( isset($_GET['page']) ?$_GET['page'] : $this->indexName );
+		$pageName = ( isset($_GET['page']) ? $_GET['page'] : $this->indexName );
 
 ?>
 <!doctype html>
@@ -135,8 +135,8 @@ class DownGen {
 	if(substr($pageFilename, 0, strlen($this->pageDir)) != $this->pageDir) $pageFilename = null;
 
 	//Is relative with upper dir? Redirect to right url
-	if(preg_match("/(\.\/|\.\.\/)/", $pageName))
-		header("Location: ?page=" . substr($pageFilename, strlen($this->pageDir) + 1, strlen($pageFilename) - strlen($this->pageDir) - 4));
+	if(preg_match("/(\.\/|\.\.\/|\\\)/", $pageName))
+		header("Location: ?page=" . str_replace("\\", "/", substr($pageFilename, strlen($this->pageDir) + 1, strlen($pageFilename) - strlen($this->pageDir) - 4)));
 
 	if(file_exists($pageFilename)):
 
