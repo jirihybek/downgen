@@ -135,7 +135,7 @@ class DownGen {
 	if(substr($pageFilename, 0, strlen($this->pageDir)) != $this->pageDir) $pageFilename = null;
 
 	//Is relative with upper dir? Redirect to right url
-	if(strpos($pageName, "../") !== false)
+	if(preg_match("/(\.\/|\.\.\/)/", $pageName))
 		header("Location: ?page=" . substr($pageFilename, strlen($this->pageDir) + 1, strlen($pageFilename) - strlen($this->pageDir) - 4));
 
 	if(file_exists($pageFilename)):
