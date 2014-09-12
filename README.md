@@ -20,12 +20,13 @@ File `index.php` in your doc directory should look like this one:
 
 	require_once(dirname(__FILE__) . "/_downgen/Downgen.php");
 
-	$generator = new Downgen(dirname(__FILE__));		//Pages directory path should be absolute
-	$generator->cssUrl = "_downgen/downgen.css";
-	$generator->indexName = "README";
-	$generator->title = "DownGEN Generator";
-	$generator->description = "Markdown documentation";
-	$generator->render();
+	$generator = new Downgen(dirname(__FILE__));			// Pages directory path is first argument and must be absolute path
+	$generator->cssUrl = "_downgen/downgen.css";			// CSS url - should be relative from index to Downgen or custom
+	$generator->indexName = "README";						// You can change default page name
+	$generator->title = "DownGEN Generator";				// The blue title
+	$generator->description = "Markdown documentation";		// Text under The blue title
+	$generator->excludePattern = "[_\.]"					// You can modify navigation exclude regexp pattern
+	$generator->render();									// Start that little machine
 
 ?>
 ```

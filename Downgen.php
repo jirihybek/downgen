@@ -19,6 +19,8 @@ class DownGen {
 	public $cssUrl = "_downgen/downgen.css";
 	public $indexName = "README";
 
+	public $excludePattern = "[_\.]";
+
 	protected $pageDir = null;
 	protected $pageList = null;
 
@@ -55,7 +57,7 @@ class DownGen {
 
 		foreach($files as $filename){
 
-			if(preg_match("/^([_\.]|\.\.)/", $filename)) continue;
+			if(preg_match("/^(\.\.|" . $this->excludePattern .")/", $filename)) continue;
 
 			if(is_dir("{$baseDir}/{$filename}")){
 
