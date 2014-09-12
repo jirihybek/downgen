@@ -42,6 +42,9 @@ For example:
 - `My-page.md` = `My page`
 - `01__First-page` = `First page`
 
+## Hidden pages and directories
+Pages or directories prefixed with `.` or `_`  are hidden from navigation tree.
+
 ## Licenses
 Downgen is licensed under MIT license - see [LICENSE.md](?page=LICENSE)
 

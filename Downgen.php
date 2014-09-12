@@ -55,7 +55,7 @@ class DownGen {
 
 		foreach($files as $filename){
 
-			if($filename == "." || $filename == ".." || substr($filename, 0, 1) == "_") continue;
+			if(preg_match("/^([_\.]|\.\.)/", $filename)) continue;
 
 			if(is_dir("{$baseDir}/{$filename}")){
 
@@ -106,7 +106,7 @@ class DownGen {
 	public function render(){
 
 		//Get page
-		$pageName = ( isset($_GET['page']) ? $_GET['page'] : $this->indexName );
+		$pageName = ( isset($_GET['page']) ? str_replace("..", "", $_GET['page']) : $this->indexName );
 
 ?>
 <!doctype html>
