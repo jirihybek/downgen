@@ -112,7 +112,7 @@ class DownGen {
 	 * @param Integer $level
 	 * @void
 	 */
-	protected function renderNavDown($pages = array(), $level = 1){
+	protected function renderNavDown($pages = array(), $level = 2){
 
 		foreach($pages as $name => $item){
 
@@ -121,7 +121,7 @@ class DownGen {
 				for($l = 0; $l < $level; $l++) echo "#";
 				echo preg_replace("/([0-9]+__|[-_])/", " ", $name) . "\n";
 
-				echo $this->renderNavDown($item, $level + 1) . "\n";
+				echo $this->renderNavDown($item, $level + 1) . "  \n";
 
 			} else {
 
