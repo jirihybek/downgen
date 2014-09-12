@@ -131,6 +131,8 @@ class DownGen {
 
 		$pageContents = file_get_contents("{$this->pageDir}/{$pageName}.md");
 
+		$pageContents = preg_replace("/\[(.*)\]\(\.\/(.*)\.(md|MD)\)/", '[${1}](?page=${2})' , $pageContents);
+
 		$parser = new ParsedownExtra();
 		echo $parser->text($pageContents);
 

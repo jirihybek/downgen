@@ -45,8 +45,11 @@ For example:
 ## Hidden pages and directories
 Pages or directories prefixed with `.` or `_`  are hidden from navigation tree.
 
+## Relative links
+Links beginning with `./` are rewrited to use Downgen - for example: `./Page.md` is rewrited to `?page=Page`.
+
 ## Licenses
-Downgen is licensed under MIT license - see [LICENSE.md](?page=LICENSE)
+Downgen is licensed under MIT license - see [LICENSE.md](./LICENSE.md)
 
 ### Used libraries
 - [Parsedown](https://github.com/erusev/parsedown) and Parsedown Extra by [Emanuil Rusev](https://github.com/erusev) licensed under MIT license
