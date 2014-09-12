@@ -121,11 +121,11 @@ class DownGen {
 				for($l = 0; $l < $level; $l++) echo "#";
 				echo preg_replace("/([0-9]+__|[-_])/", " ", $name) . "\n";
 
-				echo $this->renderNavDown($item, $level + 1) . "  \n";
+				echo $this->renderNavDown($item, $level + 1) . "\n";
 
 			} else {
 
-				echo '[' . preg_replace("/([0-9]+__|[-_])/", " ", $item) . '](./' . urlencode($name) . '.md)' . "\n";
+				echo '[' . preg_replace("/([0-9]+__|[-_])/", " ", $item) . '](./' . urlencode($name) . '.md)' . "  \n";
 
 			}
 
