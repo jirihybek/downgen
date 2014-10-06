@@ -57,6 +57,15 @@ Pages or directories prefixed with `.` or `_`  are hidden from navigation tree.
 ## Relative links
 Links beginning with `./` are rewrited to use Downgen - for example: `./Page.md` is rewrited to `?page=Page`.
 
+## MD2HTML Utility
+md2html.php is command-line script which converts all .md files in source directory into stand-alone HTML files with CSS and contents included.
+
+Usage:  
+`php md2html.php <src dir> <dst dir> <title> <description> [index name]`
+
+Example of converting all files in same directory as script to _html directory with INDEX.md as homepage:  
+`php md2html.php . _html "MyTitle" "MyDoc Description" INDEX`
+
 ## Licenses
 Downgen is licensed under MIT license - see [LICENSE.md](./LICENSE.md)
 

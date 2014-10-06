@@ -1,0 +1,350 @@
+<!doctype html>
+	<head>
+		<title>Test</title>
+		<style>@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500&subset=latin,latin-ext);*{margin:0;padding:0}body{background:#fff;font-family:Roboto,sans-serif;color:#222;font-size:15px;line-height:1}#sidebar{position:fixed;left:0;top:0;bottom:0;width:260px;background:#f3f3f3;box-shadow:0 0 8px rgba(0,0,0,.3)}#sidebar #doc-title{font-weight:300;font-size:22px;padding:24px 12px 10px;background:#f6f6f6}#sidebar #doc-title a{color:#0096ff;text-decoration:none}#sidebar #doc-title a:hover{text-decoration:underline}#sidebar #doc-description{font-weight:300;font-size:15px;padding:0 12px 16px;border-bottom:1px solid #ccc;background:#f6f6f6}#sidebar nav{position:absolute;left:0;right:0;top:100px;bottom:41px;overflow-y:auto;font-size:14px}#sidebar nav ul{list-style:none}#sidebar nav ul li{margin-bottom:6px}#sidebar nav ul li a{display:block;color:#151515;text-decoration:none;padding:10px}#sidebar nav ul li a:hover{background:#e3e3e3}#sidebar nav ul li a.current{background:#0096ff;color:#fff}#sidebar nav ul li .title{display:block;font-size:21px;font-weight:300;margin-bottom:8px}#sidebar nav ul li.dir{border-left:6px solid #999;margin-bottom:14px;padding:6px 0 0 8px}#sidebar #nav-down{position:absolute;display:none;left:0;top:88px;bottom:41px;width:240px;padding:10px;font-size:14px;border:0;background:#fff}#sidebar #nav-down.opened{display:block}#sidebar #toolbar{position:absolute;left:0;right:0;bottom:0;height:26px;line-height:26px;padding:7px;border-top:1px solid #ccc}#sidebar #toolbar .icon{display:block;padding-left:26px;width:0;height:26px;line-height:26px;overflow:hidden;background-repeat:no-repeat;background-position:top left;opacity:.5;transition:opacity .3s}#sidebar #toolbar .icon:hover{opacity:1}#sidebar #toolbar .icon-nav{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODA5N0QxMjQyM0MwMTFFMUE2Q0FEQ0Y1QzQ2NkVERTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODA5N0QxMjUyM0MwMTFFMUE2Q0FEQ0Y1QzQ2NkVERTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4MDk3RDEyMjIzQzAxMUUxQTZDQURDRjVDNDY2RURFNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4MDk3RDEyMzIzQzAxMUUxQTZDQURDRjVDNDY2RURFNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvhhcLgAAAC7SURBVHjaYvz//z8DPQCjsbGxAJBeD8QONLLjABAHMktJSW2noSUgoADEFkw0tgQGHJgY6AToZhELjHH27FlGWlgATGz/B8ZHSC54D6QEcKj/AMSKQN9/GPxxhAQUgdgAh/oL5PgGq0VQgw7Qw0c0ibMBjSOaxBlBi6gVZywk5nKy42tQxRFV4oskiyiJr9GyjuyyjhFWMQFBI9CQBipWeKDgLwDiephF++nQQDkAiqNAWpTW6O06gAADAPBDTUQmiw9zAAAAAElFTkSuQmCC)}#content{padding:33px 40px 40px 300px}.markdown-body{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#333;overflow:hidden;font-size:16px;line-height:1.6;word-wrap:break-word}.markdown-body a{background:0 0}.markdown-body a:active,.markdown-body a:hover{outline:0}.markdown-body strong{font-weight:500}.markdown-body h1{margin:.67em 0}.markdown-body img{border:0}.markdown-body hr{-moz-box-sizing:content-box;box-sizing:content-box}.markdown-body input{color:inherit;font:inherit;margin:0}.markdown-body html input[disabled]{cursor:default}.markdown-body input[type=checkbox]{box-sizing:border-box;padding:0}.markdown-body table{border-collapse:collapse;border-spacing:0}.markdown-body td,.markdown-body th{padding:0}.markdown-body *{-moz-box-sizing:border-box;box-sizing:border-box}.markdown-body input{line-height:1.4}.markdown-body a{color:#4183c4;text-decoration:none}.markdown-body a:active,.markdown-body a:focus,.markdown-body a:hover{text-decoration:underline}.markdown-body a[name],.markdown-body a[name]:active,.markdown-body a[name]:focus,.markdown-body a[name]:hover{text-decoration:none;color:#000}.markdown-body hr{overflow:hidden;background:0 0}.markdown-body hr:after,.markdown-body hr:before{display:table;content:" "}.markdown-body hr:after{clear:both}.markdown-body blockquote{margin:0}.markdown-body ol,.markdown-body ul{padding:0}.markdown-body ol ol,.markdown-body ul ol{list-style-type:lower-roman}.markdown-body ol ol ol,.markdown-body ol ul ol,.markdown-body ul ol ol,.markdown-body ul ul ol{list-style-type:lower-alpha}.markdown-body dd{margin-left:0}.markdown-body code,.markdown-body pre{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace}.markdown-body kbd{background-color:#e7e7e7;background-image:-moz-linear-gradient(#fefefe,#e7e7e7);background-image:-webkit-linear-gradient(#fefefe,#e7e7e7);background-image:linear-gradient(#fefefe,#e7e7e7);background-repeat:repeat-x;border-radius:2px;border:1px solid #cfcfcf;color:#000;padding:3px 5px;line-height:10px;font:11px Consolas,"Liberation Mono",Menlo,Courier,monospace;display:inline-block}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body .anchor{position:absolute;top:0;bottom:0;left:0;display:block;padding-right:6px;padding-left:30px;margin-left:-30px}.markdown-body .anchor:focus{outline:0}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{position:relative;margin-top:1em;margin-bottom:16px;font-weight:300;line-height:1.4}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{display:none;color:#000;vertical-align:middle}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{height:1em;padding-left:8px;margin-left:-30px;line-height:1;text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{display:inline-block}.markdown-body h1{padding-bottom:.3em;font-size:2.25em;line-height:1.2;border-bottom:1px solid #ccc}.markdown-body h2{padding-bottom:.3em;font-size:1.75em;line-height:1.225;border-bottom:1px solid #ccc}.markdown-body h3{font-size:1.5em;line-height:1.43}.markdown-body h4{font-size:1.25em}.markdown-body h5{font-size:1em}.markdown-body h6{font-size:1em;color:#777}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:4px;padding:0;margin:16px 0;background-color:#e7e7e7;border:0}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:500}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body blockquote{padding:0 15px;color:#777;border-left:4px solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:500}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;-moz-box-sizing:border-box;box-sizing:border-box}.markdown-body code{padding:.2em 0;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:0 0;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f6f6f6;border-radius:3px;border:1px dashed #ccc}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body pre{word-wrap:normal}.markdown-body pre code{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before{content:normal}.markdown-body .highlight{background:#fff}.markdown-body .highlight .c{color:#998;font-style:italic}.markdown-body .highlight .err{color:#a61717;background-color:#e3d2d2}.markdown-body .highlight .k,.markdown-body .highlight .o{font-weight:500}.markdown-body .highlight .cm{color:#998;font-style:italic}.markdown-body .highlight .cp{color:#999;font-weight:500}.markdown-body .highlight .c1{color:#998;font-style:italic}.markdown-body .highlight .cs{color:#999;font-weight:500;font-style:italic}.markdown-body .highlight .gd{color:#000;background-color:#fdd}.markdown-body .highlight .gd .x{color:#000;background-color:#faa}.markdown-body .highlight .ge{font-style:italic}.markdown-body .highlight .gr{color:#a00}.markdown-body .highlight .gh{color:#999}.markdown-body .highlight .gi{color:#000;background-color:#dfd}.markdown-body .highlight .gi .x{color:#000;background-color:#afa}.markdown-body .highlight .go{color:#888}.markdown-body .highlight .gp{color:#555}.markdown-body .highlight .gs{font-weight:500}.markdown-body .highlight .gu{color:purple;font-weight:500}.markdown-body .highlight .gt{color:#a00}.markdown-body .highlight .kc,.markdown-body .highlight .kd,.markdown-body .highlight .kn,.markdown-body .highlight .kp,.markdown-body .highlight .kr{font-weight:500}.markdown-body .highlight .kt{color:#458;font-weight:500}.markdown-body .highlight .m{color:#099}.markdown-body .highlight .s{color:#d14}.markdown-body .highlight .n{color:#333}.markdown-body .highlight .na{color:teal}.markdown-body .highlight .nb{color:#0086b3}.markdown-body .highlight .nc{color:#458;font-weight:500}.markdown-body .highlight .no{color:teal}.markdown-body .highlight .ni{color:purple}.markdown-body .highlight .ne,.markdown-body .highlight .nf{color:#900;font-weight:500}.markdown-body .highlight .nn{color:#555}.markdown-body .highlight .nt{color:navy}.markdown-body .highlight .nv{color:teal}.markdown-body .highlight .ow{font-weight:500}.markdown-body .highlight .w{color:#bbb}.markdown-body .highlight .mf,.markdown-body .highlight .mh,.markdown-body .highlight .mi,.markdown-body .highlight .mo{color:#099}.markdown-body .highlight .s2,.markdown-body .highlight .sb,.markdown-body .highlight .sc,.markdown-body .highlight .sd,.markdown-body .highlight .se,.markdown-body .highlight .sh,.markdown-body .highlight .si,.markdown-body .highlight .sx{color:#d14}.markdown-body .highlight .sr{color:#009926}.markdown-body .highlight .s1{color:#d14}.markdown-body .highlight .ss{color:#990073}.markdown-body .highlight .bp{color:#999}.markdown-body .highlight .vc,.markdown-body .highlight .vg,.markdown-body .highlight .vi{color:teal}.markdown-body .highlight .il{color:#099}.markdown-body .highlight .gc{color:#999;background-color:#EAF2F5}.markdown-body .octicon{line-height:1;display:inline-block;text-decoration:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-body .octicon-link:before{content:'\f05c'}.markdown-body .task-list-item{list-style-type:none}.markdown-body .task-list-item+.task-list-item{margin-top:3px}.markdown-body .task-list-item-checkbox{margin:0 4px .25em -20px;vertical-align:middle}</style>
+	</head>
+	<body>
+
+		<div id="sidebar">
+			<p id="doc-title"><a href="README.html" title="Go to index page">Test</a></p>
+			<p id="doc-description">Test</p>
+			<nav>
+<ul>
+	 
+	<li class="dir">
+		<span class="title"> This section is first</span>
+<ul>
+	 
+	<li class="page"><a href="01__This_section_is_first%2FAlthough_is_starts_with_T.html" class="">Although is starts with T</a></li>
+	</ul>
+	</li>
+		 
+	<li class="dir">
+		<span class="title">Markdown</span>
+<ul>
+	 
+	<li class="page"><a href="Markdown%2FMarkdown_Cheatsheet.html" class="">Markdown Cheatsheet</a></li>
+	</ul>
+	</li>
+		 
+	<li class="page"><a href="LICENSE.html" class="">LICENSE</a></li>
+		 
+	<li class="page"><a href="README.html" class="">README</a></li>
+	</ul>
+			</nav>
+		</div>
+
+		<div id="content" class="markdown-body">
+<p><strong>PLEASE DO NOT EDIT THIS PAGE!</strong> You can play around with Markdown on our <a href="http://www.markdown-here.com/livedemo.html">live demo page</a>.</p>
+<p>This is intended as a quick reference and showcase. For more complete info, see <a href="http://daringfireball.net/projects/markdown/">John Gruber's original spec</a> and the <a href="http://github.github.com/github-flavored-markdown/">Github-flavored Markdown info page</a>.</p>
+<p>Note that there is also a <a href="./Markdown-Here-Cheatsheet">Cheatsheet specific to Markdown Here</a> if that's what you're looking for.</p>
+<h5>Table of Contents</h5>
+<p><a href="#headers">Headers</a><br />
+<a href="#emphasis">Emphasis</a><br />
+<a href="#lists">Lists</a><br />
+<a href="#links">Links</a><br />
+<a href="#images">Images</a><br />
+<a href="#code">Code and Syntax Highlighting</a><br />
+<a href="#tables">Tables</a><br />
+<a href="#blockquotes">Blockquotes</a><br />
+<a href="#html">Inline HTML</a><br />
+<a href="#hr">Horizontal Rule</a><br />
+<a href="#lines">Line Breaks</a><br />
+<a href="#videos">Youtube videos</a>  </p>
+<p><a name="headers"/></p>
+<h2>Headers</h2>
+<pre><code class="language-no-highlight"># H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Alternatively, for H1 and H2, an underline-ish style:
+
+Alt-H1
+======
+
+Alt-H2
+------</code></pre>
+<h1>H1</h1>
+<h2>H2</h2>
+<h3>H3</h3>
+<h4>H4</h4>
+<h5>H5</h5>
+<h6>H6</h6>
+<p>Alternatively, for H1 and H2, an underline-ish style:</p>
+<h1>Alt-H1</h1>
+<h2>Alt-H2</h2>
+<p><a name="emphasis"/></p>
+<h2>Emphasis</h2>
+<pre><code class="language-no-highlight">Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~</code></pre>
+<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+<p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
+<p><a name="lists"/></p>
+<h2>Lists</h2>
+<p>(In this example, leading and trailing spaces are shown with with dots: ⋅)</p>
+<pre><code class="language-no-highlight">1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list. 
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
+
+⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses</code></pre>
+<ol>
+<li>First ordered list item</li>
+<li>Another item
+<ul>
+<li>Unordered sub-list. </li>
+</ul></li>
+<li>Actual numbers don't matter, just that it's a number
+<ol>
+<li>Ordered sub-list</li>
+</ol></li>
+<li>
+<p>And another item.</p>
+<p>You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).</p>
+<p>To have a line break without a paragraph, you will need to use two trailing spaces.<br />
+Note that this line is separate, but within the same paragraph.<br />
+(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)</p>
+</li>
+</ol>
+<ul>
+<li>Unordered list can use asterisks</li>
+<li>Or minuses</li>
+<li>Or pluses</li>
+</ul>
+<p><a name="links"/></p>
+<h2>Links</h2>
+<p>There are two ways to create links.</p>
+<pre><code class="language-no-highlight">[I'm an inline-style link](https://www.google.com)
+
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+
+[I'm a reference-style link][Arbitrary case-insensitive reference text]
+
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
+
+[You can use numbers for reference-style link definitions][1]
+
+Or leave it empty and use the [link text itself]
+
+Some text to show that the reference links can follow later.
+
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com</code></pre>
+<p><a href="https://www.google.com">I'm an inline-style link</a></p>
+<p><a href="https://www.google.com" title="Google's Homepage">I'm an inline-style link with title</a></p>
+<p><a href="https://www.mozilla.org">I'm a reference-style link</a></p>
+<p><a href="../blob/master/LICENSE">I'm a relative reference to a repository file</a></p>
+<p><a href="http://slashdot.org">You can use numbers for reference-style link definitions</a></p>
+<p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a></p>
+<p>Some text to show that the reference links can follow later.</p>
+<p><a name="images"/></p>
+<h2>Images</h2>
+<pre><code class="language-no-highlight">Here's our logo (hover to see the title text):
+
+Inline-style: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+Reference-style: 
+![alt text][logo]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"</code></pre>
+<p>Here's our logo (hover to see the title text):</p>
+<p>Inline-style: 
+<img alt="alt text" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 1" /></p>
+<p>Reference-style: 
+<img alt="alt text" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 2" /></p>
+<p><a name="code"/></p>
+<h2>Code and Syntax Highlighting</h2>
+<p>Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's and <em>Markdown Here</em> -- support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer. <em>Markdown Here</em> supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the <a href="http://softwaremaniacs.org/media/soft/highlight/test.html">highlight.js demo page</a>.</p>
+<pre><code class="language-no-highlight">Inline `code` has `back-ticks around` it.</code></pre>
+<p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
+<p>Blocks of code are either fenced by lines with three back-ticks <code>```</code>, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.</p>
+<pre lang="no-highlight"><code>```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+```python
+s = "Python syntax highlighting"
+print s
+```
+```
+No language indicated, so no syntax highlighting. 
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+```
+</code></pre>
+<pre><code class="language-javascript">var s = "JavaScript syntax highlighting";
+alert(s);</code></pre>
+<pre><code class="language-python">s = "Python syntax highlighting"
+print s</code></pre>
+<pre><code>No language indicated, so no syntax highlighting in Markdown Here (varies on Github). 
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.</code></pre>
+<p><a name="tables"/></p>
+<h2>Tables</h2>
+<p>Tables aren't part of the core Markdown spec, but they are part of GFM and <em>Markdown Here</em> supports them. They are an easy way of adding tables to your email -- a task that would otherwise require copy-pasting from another application.</p>
+<pre><code class="language-no-highlight">Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3</code></pre>
+<p>Colons can be used to align columns.</p>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th align="center">Are</th>
+<th align="right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col 3 is</td>
+<td align="center">right-aligned</td>
+<td align="right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td align="center">are neat</td>
+<td align="right">$1</td>
+</tr>
+<tr>
+<td>The outer pipes (</td>
+<td align="center">) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.</td>
+</tr>
+<tr>
+<td>Markdown</td>
+<td align="center">Less</td>
+<td align="right">Pretty</td>
+</tr>
+<tr>
+<td>---</td>
+<td align="center">---</td>
+<td align="right">---</td>
+</tr>
+<tr>
+<td><em>Still</em></td>
+<td align="center"><code>renders</code></td>
+<td align="right"><strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td align="center">2</td>
+<td align="right">3</td>
+</tr>
+</tbody>
+</table>
+<p><a name="blockquotes"/></p>
+<h2>Blockquotes</h2>
+<pre><code class="language-no-highlight">&gt; Blockquotes are very handy in email to emulate reply text.
+&gt; This line is part of the same quote.
+
+Quote break.
+
+&gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. </code></pre>
+<blockquote>
+<p>Blockquotes are very handy in email to emulate reply text.
+This line is part of the same quote.</p>
+</blockquote>
+<p>Quote break.</p>
+<blockquote>
+<p>This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote. </p>
+</blockquote>
+<p><a name="html"/></p>
+<h2>Inline HTML</h2>
+<p>You can also use raw HTML in your Markdown, and it'll mostly work pretty well. </p>
+<pre><code class="language-no-highlight">&lt;dl&gt;
+  &lt;dt&gt;Definition list&lt;/dt&gt;
+  &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;
+
+  &lt;dt&gt;Markdown in HTML&lt;/dt&gt;
+  &lt;dd&gt;Does *not* work **very** well. Use HTML &lt;em&gt;tags&lt;/em&gt;.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+<p><a name="hr"/></p>
+<h2>Horizontal Rule</h2>
+<pre><code>Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+___
+
+Underscores</code></pre>
+<p>Three or more...</p>
+<hr />
+<p>Hyphens</p>
+<hr />
+<p>Asterisks</p>
+<hr />
+<p>Underscores</p>
+<p><a name="lines"/></p>
+<h2>Line Breaks</h2>
+<p>My basic recommendation for learning how line breaks work is to experiment and discover -- hit &lt;Enter&gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. "Markdown Toggle" is your friend. </p>
+<p>Here are some things to try out:</p>
+<pre><code>Here's a line for us to start with.
+
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+
+This line is also a separate paragraph, but...
+This line is only separated by a single newline, so it's a separate line in the *same paragraph*.</code></pre>
+<p>Here's a line for us to start with.</p>
+<p>This line is separated from the one above by two newlines, so it will be a <em>separate paragraph</em>.</p>
+<p>This line is also begins a separate paragraph, but...<br />
+This line is only separated by a single newline, so it's a separate line in the <em>same paragraph</em>.</p>
+<p>(Technical note: <em>Markdown Here</em> uses GFM line breaks, so there's no need to use MD's two-space line breaks.)</p>
+<p><a name="videos"/></p>
+<h2>Youtube videos</h2>
+<p>They can't be added directly but you can add an image with a link to the video like this:</p>
+<pre><code class="language-no-highlight">&lt;a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=YOUTUBE_VIDEO_ID_HERE
+" target="_blank"&gt;&lt;img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /&gt;&lt;/a&gt;</code></pre>
+<p>Or, in pure Markdown, but losing the image sizing and border:</p>
+<pre><code class="language-no-highlight">[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)</code></pre>
+<p>Referencing a bug by #bugID in your git commit links it to the slip. For example #1. </p>		</div>
+
+	</body>
+</html>
